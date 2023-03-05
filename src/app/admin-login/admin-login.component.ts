@@ -10,6 +10,7 @@ export class AdminLoginComponent {
     password:string ="";
 
     doLogin(){
-
+      console.log("username ",this.username);
+      console.log("Pass ",this.password);
     }
 }
