@@ -19,7 +19,10 @@ export class AdminLoginComponent {
       console.log("username ",this.admin.username);
       console.log("Pass ",this.admin.password);
       this.adminLoginService.adminLogin(this.admin)
-      .subscribe(() => console.log('User created successfully'));
+      .subscribe((data: any) => {
+        console.log(data);
+        
+      });
     }
     onSubmit(){
      
