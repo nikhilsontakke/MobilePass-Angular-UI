@@ -12,14 +12,13 @@ export class AdminLoginComponent {
     username:string ="";
     password:string ="";
 
-    constructor(private AdminLoginService :AdminLoginService ){
-
+    constructor(private adminLoginService :AdminLoginService ){
     }
 
     doLogin(){
       console.log("username ",this.admin.username);
       console.log("Pass ",this.admin.password);
-      this.AdminLoginService.adminLogin(this.admin)
+      this.adminLoginService.adminLogin(this.admin)
       .subscribe(() => console.log('User created successfully'));
     }
     onSubmit(){

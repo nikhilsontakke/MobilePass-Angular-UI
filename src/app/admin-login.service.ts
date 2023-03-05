@@ -9,7 +9,7 @@ import { Admin } from './admin';
 })
 export class AdminLoginService {
 
-  private baseUrl = "http://localhost:8080/api/users";
+  // private baseUrl = "http://localhost:8080/api/users";
 
   constructor(private http: HttpClient) { }
 

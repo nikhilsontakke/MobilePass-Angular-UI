@@ -1,5 +1,5 @@
 export class Admin {
     
-  username: string | undefined;
-  password: string | undefined;
+  username: string ;
+  password: string ;
 }
