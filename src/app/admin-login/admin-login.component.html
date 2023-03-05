@@ -11,15 +11,15 @@
       <h2>ADMIN LOGIN</h2>
       <div class="underline-title"></div>
     </div>
-    <form method="post" class="form">
+    <form method="post" class="form" (ngSubmit)="onSubmit()">
       <label for="user-email" style="padding-top:13px">
         &nbsp;Email
       </label>
-      <input id="user-email" class="form-content" type="email" name="email" [(ngModel)]="username" autocomplete="on" required />
+      <input id="user-email" class="form-content" type="email" name="email" [(ngModel)]="admin.username" autocomplete="on" required />
       <div class="form-border"></div>
       <label for="user-password" style="padding-top:22px">&nbsp;Password
       </label>
-      <input id="user-password" class="form-content" type="password" name="password" [(ngModel)]="password" required />
+      <input id="user-password" class="form-content" type="password" name="password" [(ngModel)]="admin.password" required />
       <div class="form-border"></div>
       <input id="submit-btn" type="submit" name="submit" value="LOGIN" (click)="doLogin()" />
     </form>
