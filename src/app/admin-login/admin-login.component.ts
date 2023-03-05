@@ -16,12 +16,9 @@ export class AdminLoginComponent {
     }
 
     doLogin(){
-      console.log("username ",this.admin.username);
-      console.log("Pass ",this.admin.password);
       this.adminLoginService.adminLogin(this.admin)
       .subscribe((data: any) => {
-        console.log(data);
-        
+        console.log(JSON.parse(data));
       });
     }
     onSubmit(){
