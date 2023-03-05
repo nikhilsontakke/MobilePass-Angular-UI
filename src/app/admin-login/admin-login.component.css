@@ -8,6 +8,11 @@ body{
 
 /*waves****************************/
 
+.box2 {
+  bottom: 123;
+	transform: rotate(250deg);
+	right: 0;
+}
 
 .box {
 	position: fixed;
@@ -215,5 +220,5 @@ a {
     background: -webkit-linear-gradient(right, #0e6cc4, #0e6cc4);
     height: 2px;
     margin: -1.1rem auto 0 auto;
-    width: 200px;
+    width: 113px;
   }
