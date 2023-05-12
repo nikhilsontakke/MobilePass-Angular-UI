@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { TableDet } from './TableDetails';
 @Injectable({
   providedIn: 'root'
 })
@@ -7,13 +8,13 @@ export class DashboardsrvcService {
 
   constructor(private http: HttpClient) { }
   
-  getTableDetails(){
+  getTableDetails() {
     
     
     console.log("gettabledetails is : ")
+    // const options = {headers: {'Content-Type': 'application/json'}};
     const options = {headers: {'Content-Type': 'application/json'}};
-    
-    return this.http.get("http://192.168.1.96:8080/activitlogs") ;
+    return this.http.get<any>("http://localhost:8080/activitlogs") ;
 
   }
 }
