@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Admin } from './admin';
 // import { Admin } from './admin';
@@ -14,7 +14,11 @@ export class AdminLoginService {
   constructor(private http: HttpClient) { }
 
   adminLogin(admin: Admin){
-    return this.http.post("http://localhost:8080/login/useradmin",admin);
+    
+    const body=JSON.stringify(admin)
+    console.log("adminlogin service: ",body)
+    const options = {headers: {'Content-Type': 'application/json'}};
+    return this.http.post("http://192.168.1.96:8080/login/useradmin",body,options);
   }
 
 }

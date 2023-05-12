@@ -5,17 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HomeDashboardComponent } from './home-dashboard/home-dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgChartsModule } from 'ng2-charts';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoginComponent,
+    HomeDashboardComponent,
+    TableComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,HttpClientModule
+    NgChartsModule,
+    FormsModule,HttpClientModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

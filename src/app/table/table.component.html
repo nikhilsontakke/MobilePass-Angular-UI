@@ -1,0 +1,39 @@
+<!-- <h1>Location Table</h1>
+<hr>
+<table id="users">
+    <tr>
+        <th *ngFor="let column of headers">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor="let row of rows">
+        <td *ngFor="let column of headers">
+            {{row[column]}}
+        </td>
+    </tr>
+</table> -->
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th *ngFor="let column of headers">
+                {{column}}
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows">
+            <td *ngFor="let column of headers">
+                {{row[column]}}
+            </td>
+            <td  class="status-dot-active">Active
+
+            </td>
+        </tr>
+       
+        <!-- and so on... -->
+    </tbody>
+</table>

@@ -1,0 +1,98 @@
+/* h1
+{
+    text-align: center;
+    color: rgb(14, 14, 14);
+}
+
+
+#users {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #users td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #users tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #users tr:hover {background-color: #ddd;}
+  
+  #users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: blueviolet;
+    color: white;
+  } */
+
+  .styled-table {
+    border-collapse: collapse;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    
+    margin: 0 auto;
+    /* margin: 25px 0; */
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    text-align: center;
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+/* brace for chatgpt impact */
+
+/* td:nth-child(1)::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 300%;
+    background-color: red;
+    padding-right: 5px;
+  } */
+  .status-dot-active::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    left: 0;
+    top: 50%;
+    margin-right: 4px;
+    transform: translateY(-10%);
+    width: 4px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: rgb(34, 215, 89);
+    padding-right: 5px;
+  }

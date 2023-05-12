@@ -9,8 +9,8 @@ import { AdminLoginService } from '../admin-login.service';
 })
 export class AdminLoginComponent {
   admin: Admin = new Admin();
-    username:string ="";
-    password:string ="";
+    username:string ="nikhil.sontakke19@vit.edu";
+    password:string ="Nikhil@123";
 
     constructor(private adminLoginService :AdminLoginService ){
     }
@@ -18,7 +18,7 @@ export class AdminLoginComponent {
     doLogin(){
       this.adminLoginService.adminLogin(this.admin)
       .subscribe((data: any) => {
-        console.log(JSON.parse(data));
+        console.log(data);
       });
     }
     onSubmit(){
