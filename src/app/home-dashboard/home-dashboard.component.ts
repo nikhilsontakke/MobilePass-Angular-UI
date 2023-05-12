@@ -23,7 +23,7 @@ export class HomeDashboardComponent  {
     .subscribe(response => {
       this.details = response;
       console.log("inside get details")
-      console.log(this.details)
+      console.log(this.details.doorId)
     });
   }
   

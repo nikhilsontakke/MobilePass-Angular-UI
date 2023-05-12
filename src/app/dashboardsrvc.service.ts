@@ -14,7 +14,7 @@ export class DashboardsrvcService {
     console.log("gettabledetails is : ")
     // const options = {headers: {'Content-Type': 'application/json'}};
     const options = {headers: {'Content-Type': 'application/json'}};
-    return this.http.get<any>("http://localhost:8080/activitlogs") ;
+    return this.http.get<TableDet>("http://localhost:8081/activitylogs") ;
 
   }
 }
