@@ -18,7 +18,7 @@ export class AdminLoginService {
     const body=JSON.stringify(admin)
     console.log("adminlogin service: ",body)
     const options = {headers: {'Content-Type': 'application/json'}};
-    return this.http.post("http://192.168.1.96:8080/login/useradmin",body,options);
+    return this.http.post("http://localhost:8080/login/useradmin",body,options);
   }
 
 }

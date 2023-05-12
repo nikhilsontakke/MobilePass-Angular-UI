@@ -7,7 +7,7 @@ import { TableDet } from '../TableDetails';
 @Component({
   selector: 'app-home-dashboard',
   templateUrl: './home-dashboard.component.html',
-  styleUrls: ['./home-dashboard.component.css']
+  styleUrls: ['./stylescss.scss']
 })
 
 export class HomeDashboardComponent  {
