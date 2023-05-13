@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DashboardsrvcService } from '../dashboardsrvc.service';
 import { TableDet } from '../TableDetails';
+import { PutDataService } from '../put-data.service';
 
 @Component({
   selector: 'app-table',
@@ -9,7 +10,7 @@ import { TableDet } from '../TableDetails';
 })
 export class TableComponent {
   details:TableDet=new TableDet();
-  constructor(private dashboardserv :DashboardsrvcService ){
+  constructor(private dashboardserv :DashboardsrvcService,private putData:PutDataService ){
   }
 // headers=["Username","Employee Name","Room", "Entry Time"]
 headers=["name","nfcId","username", "doorId"]
@@ -35,6 +36,18 @@ rows:any=[{}]
 ngOnInit(){
   this.getDetails();
   
+}
+add(){
+  this.putData.addRoom().subscribe((data: any) => {
+    console.log("inside AddRoom",data);
+    
+  });
+}
+delete(){
+  this.putData.removeRomoe().subscribe((data: any) => {
+    console.log("inside AddRoom",data);
+    
+  });
 }
 getDetails(){
   this.dashboardserv.getTableDetails()

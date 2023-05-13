@@ -20,14 +20,14 @@ export class AdminLoginComponent {
     doLogin(){
       this.admin2.username="nikhil.sontakke19@vit.edu"
       this.admin2.password=this.password
-      this.adminLoginService.adminLogin(this.admin2)
+      this.adminLoginService.adminLogin(this.admin)
       .subscribe((data: any) => {
         console.log("inside doLogin",data);
         this.gotoTable();
       });
     }
     onSubmit(){
-      this.gotoTable();
+      // this.gotoTable();
     }
     gotoTable() {
       this.router.navigate(['/table']);
